@@ -1,14 +1,15 @@
-<md-toolbar class="md-list-item-text profile" layout="row">
-    <!--<img class="md-avatar" src="https://pbs.twimg.com/profile_images/833315217694142465/qD1nuvkD.jpg">-->
-    <div layout="column" layout-align="center start">
-        <!--<h3><strong>Davi Daniel</strong></h3>-->
-        <span>davicoradini@gmail.com</span>
-    </div>
-</md-toolbar>
-
 <md-content flex role="navigation" class="left-sidenav">
-
     <md-list>
+        <md-list-item class="profile">
+            <img class="md-avatar" src="https://pbs.twimg.com/profile_images/833315217694142465/qD1nuvkD.jpg">
+            <div layout="column" layout-align="center start">
+                <h3>
+                    <strong>Davi Daniel</strong>
+                    <span class="md-body-1">davicoradini@gmail.com</span>
+                </h3>
+            </div>
+        </md-list-item>
+
         <md-list-item ui-sref="protected.home"
                       ng-class="{ active: $root.$state.includes('protected.home')}">
             <md-icon md-font-icon="material-icons" aria-label="Creator">perm_identity</md-icon>

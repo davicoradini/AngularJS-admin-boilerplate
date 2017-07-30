@@ -20,10 +20,11 @@ var application = angular.module(
         'noDev.public'
     ])
 
-    .config(['$urlRouterProvider', 'cfpLoadingBarProvider', '$mdThemingProvider', '$httpProvider',
-        function ($urlRouterProvider, cfpLoadingBarProvider, $mdThemingProvider, $httpProvider) {
+    .config(['$urlRouterProvider', 'cfpLoadingBarProvider', '$mdThemingProvider', '$httpProvider', '$locationProvider',
+        function ($urlRouterProvider, cfpLoadingBarProvider, $mdThemingProvider, $httpProvider, $locationProvider) {
 
-            $urlRouterProvider.otherwise('/home');
+            $urlRouterProvider.otherwise('/');
+            $locationProvider.html5Mode(true);
             $httpProvider.interceptors.push('AuthInterceptor');
             cfpLoadingBarProvider.includeSpinner = false;
 
